@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.wso2.orbit.com.github.fge:json-schema-validator-all:2.2.6.wso2v7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wso2/orbit/com/github/fge/json-schema-validator-all/2.2.6.wso2v7/json-schema-validator-all-2.2.6.wso2v7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wso2/orbit/com/github/fge/json-schema-validator-all/2.2.6.wso2v7/json-schema-validator-all-2.2.6.wso2v7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wso2/orbit/com/github/fge/json-schema-validator-all/2.2.6.wso2v7/json-schema-validator-all-2.2.6.wso2v7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

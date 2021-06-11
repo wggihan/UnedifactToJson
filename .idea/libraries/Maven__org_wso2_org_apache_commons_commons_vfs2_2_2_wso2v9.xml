@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.wso2.org.apache.commons:commons-vfs2:2.2-wso2v9">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wso2/org/apache/commons/commons-vfs2/2.2-wso2v9/commons-vfs2-2.2-wso2v9.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wso2/org/apache/commons/commons-vfs2/2.2-wso2v9/commons-vfs2-2.2-wso2v9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/wso2/org/apache/commons/commons-vfs2/2.2-wso2v9/commons-vfs2-2.2-wso2v9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
