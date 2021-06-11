@@ -57,11 +57,9 @@ public class JsonToEdi extends AbstractMediator {
                 element.detach();
             }
             JsonUtil.removeJsonStream(((Axis2MessageContext) context).getAxis2MessageContext());
-            String om = ediOutStream.toString();
-            OMFactory fac = OMAbstractFactory.getOMFactory();
-            OMElement tt = fac.createOMElement(BaseConstants.DEFAULT_TEXT_WRAPPER);
-            tt.setText(om);
-            context.getEnvelope().getBody().addChild(tt);
+            OMElement textOm = OMAbstractFactory.getOMFactory().createOMElement(BaseConstants.DEFAULT_TEXT_WRAPPER);
+            textOm.setText(ediOutStream.toString());
+            context.getEnvelope().getBody().addChild(textOm);
         } catch (Exception e) {
             e.printStackTrace();
         }

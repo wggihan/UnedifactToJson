@@ -18,17 +18,12 @@ public class DemoClass extends AbstractMediator {
     public boolean mediate(MessageContext context) {
         try {
             Smooks smooks = new Smooks();
-//            smooks.setReaderConfig(new UNEdifactReaderConfigurator("urn:org.milyn.edi.unedifact:d03b-mapping:*"));
-            smooks.setReaderConfig(
-                    new UNEdifactReaderConfigurator("//Users//gihan//Desktop//d04a-mapping-1.7.1.0.jar"));
+            smooks.setReaderConfig(new UNEdifactReaderConfigurator("urn:org.milyn.edi.unedifact:d04a-mapping:*"));
             try {
                 StringWriter writer = new StringWriter();
-                String edi = "";
                 OMElement first = context.getEnvelope().getBody().getFirstElement();
-                if (first != null) {
-                    first.buildWithAttachments();
-                    edi = first.getText();
-                }
+                first.buildWithAttachments();
+                String edi = first.getText();
                 smooks.filterSource(new ByteSource(edi.getBytes(StandardCharsets.US_ASCII)), new StreamResult(writer));
                 Iterator itr = context.getEnvelope().getBody().getChildElements();
                 while (itr.hasNext()) {

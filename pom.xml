@@ -29,6 +29,11 @@
 			<artifactId>commons-logging</artifactId>
 			<version>1.1.1</version>
 		</dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
+        </dependency>
 		<dependency>
 			<groupId>org.milyn</groupId>
 			<artifactId>milyn-smooks-edi</artifactId>
@@ -38,11 +43,6 @@
 			<groupId>org.milyn</groupId>
 			<artifactId>milyn-smooks-core</artifactId>
 			<version>1.7.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.milyn.edi.unedifact</groupId>
-			<artifactId>d03b-mapping</artifactId>
-			<version>1.7.1.0</version>
 		</dependency>
         <dependency>
 			<groupId>org.milyn.edi.unedifact</groupId>
@@ -55,9 +55,9 @@
 			<version>1.7.1.0</version>
 		</dependency>
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.8.5</version>
+            <groupId>org.milyn</groupId>
+            <artifactId>milyn-smooks-all</artifactId>
+            <version>1.7.1</version>
         </dependency>
     </dependencies>
 	<repositories>
@@ -94,7 +94,10 @@
 						<Bundle-SymbolicName>DemoClass</Bundle-SymbolicName>
 						<Bundle-Name>DemoClass</Bundle-Name>
 						<Export-Package>org.wso2.dpw</Export-Package>
-						<DynamicImport-Package>*</DynamicImport-Package>
+                        <Import-Package>*;resolution:=optional</Import-Package>
+                        <Embed-Transitive>true</Embed-Transitive>
+                        <Embed-Dependency>*;artifactId=milyn-smooks-edi|milyn-smooks-core|d04a-mapping
+                            |d04a-binding|milyn-smooks-all;inline=true</Embed-Dependency>
 					</instructions>
 				</configuration>
 			</plugin>
